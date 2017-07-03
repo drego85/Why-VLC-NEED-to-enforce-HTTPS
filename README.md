@@ -10,9 +10,9 @@ Il sito internet ufficiale di VLC (videolan.org) nonostante sia dotato di un cer
 
 Secondo le stime pubblicate dal fondatore di VLC il software è stato scariato oltre 2,3 miliardi di volte: https://twitter.com/etixxx/status/881926077836398592
 
-Tramite un attacco Man in The Middle è possibile pertanto iniettare codice HTML arbitrario nel sito ufficiale di VLC, in versione non HTTPS, illudendo l'utente di scaricare un file eseguibile di installazione autentico ma realmente i link originali sono stati alterati per indirizzare l'utente ad una risorsa esterna che potrebbe contenere Malware. L'attacco MiM è possibile generarlo quando la vittima e l'attaccante si trovano nella stessa rete, un Access Point Wireless di un Aeroporto, Albergo e Bar sono tre comuni esempi.
+Tramite un attacco Man in The Middle è possibile pertanto iniettare codice HTML arbitrario nel sito ufficiale di VLC, in versione non HTTPS, illudendo l'utente di scaricare un file di installazione autentico ma realmente la vittima viene indirizzata ad una risorsa esterna che potrebbe contenere Malware. L'attacco MiM è possibile generarlo quando la vittima e l'attaccante si trovano nella stessa rete, un Access Point Wireless di un Aeroporto, Albergo e Bar sono tre comuni esempi.
 
-Il risultato dell'attacco è un alterazione della pagina di download (es. http://get.videolan.org/vlc/2.2.6/win32/vlc-2.2.6-win32.exe) nella quale andremo ad alterare le seguenti porzioni di codice:
+Il risultato dell'attacco è l'alterazione della pagina di download (es. http://get.videolan.org/vlc/2.2.6/win32/vlc-2.2.6-win32.exe) nella quale andremo a variare le seguenti porzioni di codice:
 
 ```html
 <meta http-equiv="refresh" content="5;URL='https://videolan.mirror.garr.it/mirrors/videolan/vlc/2.2.6/win32/vlc-2.2.6-win32.exe'" />
@@ -30,7 +30,7 @@ Terminata questa personalizzazione avviamo Bettercap con i permessi di root, dig
 
 $ sudo bettercap --proxy-module exploit_vlc.rb
 
-Eventualmente è possibile indicare uno specifico target con il parametro -T e l'interfaccia di rete con il paramentro -I. Se non viene specificato un target tutti gli host collegati alla rete potrebbero essere dei possibili target.
+Eventualmente è possibile indicare uno specifico target con il parametro -T e l'interfaccia di rete con il paramentro -I. Se non viene specificato alcun target tutti gli host collegati alla rete potrebbero essere dei possibili target.
 
 # Credits
 * Fabio (Naif) Pietrosanti 
@@ -38,4 +38,4 @@ Eventualmente è possibile indicare uno specifico target con il parametro -T e l
 
 # Disclaimer 
 
-La tecnica illustrata è puramente a scopo divulgativo, può inoltre essere sfruttata su qualsiasi sito internet che diffonde software. L'attenzione nostra è ricaduta su VLC poichè è un software di grande interesse pubblico come ci ha anche affermato lo sviluppatore principale.
+La tecnica illustrata è puramente a scopo divulgativo, può inoltre essere sfruttata su qualsiasi sito internet che diffonde software. L'attenzione nostra è ricaduta su VLC poichè è un software di grande interesse come ci ha anche affermato lo sviluppatore principale.
