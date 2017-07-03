@@ -32,6 +32,10 @@ $ sudo bettercap --proxy-module exploit_vlc.rb
 
 Eventualmente è possibile indicare uno specifico target con il parametro -T e l'interfaccia di rete con il paramentro -I. Se non viene specificato un target tutti gli host collegati alla rete potrebbero essere dei possibili target.
 
+# Credits
+* Fabio (Naif) Pietrosanti 
+* Andrea (Drego) Draghetti
+
 # Disclaimer 
 
 La tecnica illustrata è puramente a scopo divulgativo, può inoltre essere sfruttata su qualsiasi sito internet che diffonde software. L'attenzione nostra è ricaduta su VLC poichè è un software di grande interesse pubblico come ci ha anche affermato lo sviluppatore principale.
