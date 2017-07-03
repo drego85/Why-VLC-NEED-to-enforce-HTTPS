@@ -14,10 +14,11 @@ Tramite un attacco Man in The Middle è possibile pertanto iniettare codice HTML
 
 Il risultato dell'attacco è un alterazione della pagina di download (es. http://get.videolan.org/vlc/2.2.6/win32/vlc-2.2.6-win32.exe) nella quale andremo ad alterare le seguenti porzioni di codice:
 
+```html
 <meta http-equiv="refresh" content="5;URL='https://videolan.mirror.garr.it/mirrors/videolan/vlc/2.2.6/win32/vlc-2.2.6-win32.exe'" />
 
 <span> If not, <a href="https://videolan.mirror.garr.it/mirrors/videolan/vlc/2.2.6/win32/vlc-2.2.6-win32.exe" id="alt_link">click here</a>.
-
+```
 
 # How To
 
