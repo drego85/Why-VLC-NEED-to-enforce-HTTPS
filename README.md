@@ -19,7 +19,7 @@ The result of the attack is the alteration of the download page (i.e. http://get
 # How To
 In order to effectively carry out the attack, we used Bettercap (https://www.bettercap.org/) and a custom Ruby module "exploit_vlc.rb" which is made publicly available on this repo.
 
-The custom Ruby module contains the URL of the mirror, which we want the victim to point to, for downloading the VLC installer.
+The custom Ruby module contains the URL of the mirror, which we want the victim to point to, for downloading the VLC installer, it is also possible to replace the checksum with one that’s valid for our malware.
 
 Once the module has been customised, Bettercap can be started using root privileges as shown below:
 
