@@ -32,7 +32,7 @@ $ sudo bettercap --proxy-module exploit_vlc.rb
 
 Eventually, it would be possible to use a specific target calling the -T option and the network interface with the -I one. If no target is specified, all connected hosts of the network could become a potential target.
 
-# Blocking executable downloads in HTTP as Browser Security Features
+# Tickets to improve Browser Security 
 Multiple tickets has been opened to Chrome Bug Tracker, Mozilla Firefox BugTracker and Tor Project's TorBrowser one in order to implement a feature to natively block or provide a big-red-warning (like for wrong TLS certificates) for users downloading executable code over HTTP in clear text.
 
 That would likely obbly any software distribution to happen over an encrypted and authenticated channel.
@@ -46,7 +46,7 @@ Below the issues, please support them:
 [Tor Browser: Tor Browser does not provide red security warning for downloading executable in HTTP](https://trac.torproject.org/projects/tor/ticket/22809)
 
 
-# Tickets opened on VideoLan bug trackers
+# Tickets to improve VideoLan
 Multiple tickets to fix the situation, also considering the VideoLan project constrain and resources, has been opened but unfortunately there was not acknowledgement of the various sustainability proposals to be full-HTTPS.
 
 All of those tickets has been closed as invalid or duplicate after a brief discussion denying the possibility to do it or declaring totally invalid the solutions proposed to achieve a full-HTTPS distribution of software, including threatening of being banned out of the ticketing system.
