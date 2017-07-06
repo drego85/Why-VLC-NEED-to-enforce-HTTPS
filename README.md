@@ -53,7 +53,7 @@ All of those tickets has been closed as invalid or duplicate after a brief discu
 
 [Enforce HTTPS for distribution of software as a security measure against targeted malware attacks](https://github.com/etix/mirrorbits/issues/59)
 
-[Enforce the uses of HTTPS for all websites of VLC/videolan.org to prevent MITM exploits] (https://trac.videolan.org/vlc/ticket/18472)
+[Enforce the uses of HTTPS for all websites of VLC/videolan.org to prevent MITM exploits](https://trac.videolan.org/vlc/ticket/18472)
 
 [Map all the existing VLC mirrors that already support HTTPS](https://trac.videolan.org/vlc/ticket/18484)
 
