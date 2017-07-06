@@ -1,5 +1,8 @@
 # PoC Video
-https://www.youtube.com/watch?v=dhTAqCz7ktU
+
+* [First PoC with Injection HTML Code on VideoLan official Site](https://www.youtube.com/watch?v=dhTAqCz7ktU)
+* [Second PoC with Spoofed Mirror and Hash Checksum](https://www.youtube.com/watch?v=azKDC9JbnE4)
+
 
 # Man in The Middle
 VLC's official website, even having a valid SSL certificate, does not force users to use the HTTPS protocol. Major search engines have indexed VLC's website as HTTP so users are being redirected to the insecure version of the site.
@@ -42,7 +45,7 @@ Below the issues, please support them:
 
 [Firefox: Warn when downloading executable files over HTTP](https://bugzilla.mozilla.org/show_bug.cgi?id=1303739)
 
-[Chromne: Downloading windows executable over HTTP in clear-text should provide a red warning](https://twitter.com/fpietrosanti/status/882146954276483072)
+[Chrome: Downloading windows executable over HTTP in clear-text should provide a red warning](https://twitter.com/fpietrosanti/status/882146954276483072)
 
 [Tor Browser: Tor Browser does not provide red security warning for downloading executable in HTTP](https://trac.torproject.org/projects/tor/ticket/22809)
 
@@ -71,6 +74,8 @@ All of those tickets has been closed as invalid or duplicate after a brief discu
 * Fabio (Naif) Pietrosanti 
 * Andrea (Drego) Draghetti
 * Eddy (mane) Boscolo
+* Simone (Evilsocket) Margaritelli
+* Joel Drapper
 
 # Disclaimer 
 All of provided information in this article is for educational purposes only. You accept full responsibility for the consequences of your use, or non-use, of any information provided by us through any means whatsoever.
