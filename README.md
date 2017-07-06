@@ -7,7 +7,7 @@ VLC's official website, even having a valid SSL certificate, does not force user
 Ludovic Fauvet of VideoLan denied that was possible to inject a malware in the current VLC software distribution and asked for a Proof of Concept: 
 ![alt text](https://raw.githubusercontent.com/drego85/Why-VLC-NEED-to-enforce-HTTPS/master/etixxx.png)
 
-According to the official stats, published by VLC founder, the software has been downloaded over 2.3 billion times: https://twitter.com/etixxx/status/881926077836398592
+According to the official stats, published by a VLC developer and ex-VideoLan treasurer, the software has been downloaded over 2.3 billion times: https://twitter.com/etixxx/status/881926077836398592
 
 That's a serious problem to be urgently worked on, because governments around the world [infect with malware their citizens for spying purposes](https://twitter.com/botherder/status/882243803448561665) when executables are being served in HTTP.
 
