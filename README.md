@@ -63,7 +63,7 @@ All of those tickets has been closed as invalid or duplicate after a brief discu
 
 [Integrate Cloudflare free as an HTTPS domain fronting and caching for www.videolan.org and get.videolan.org] (https://trac.videolan.org/vlc/ticket/18486)
 
-[A solution to provide secure downloads using existing mirrors](https://trac.videolan.org/vlc/ticket/18489]
+[A solution to provide secure downloads using existing mirrors](https://trac.videolan.org/vlc/ticket/18489)
 
 
 # Credits
