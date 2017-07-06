@@ -9,9 +9,10 @@ Ludovic Fauvet of VideoLan denied that was possible to inject a malware in the c
 
 According to the official stats, published by VLC founder, the software has been downloaded over 2.3 billion times: https://twitter.com/etixxx/status/881926077836398592
 
-That's a serious problem to be urgently worked on, because governments around the world infect with malware their citizens for spying purposes, [leading to torturing and killing in dictatorship](https://twitter.com/botherder/status/882243803448561665) when executables are being served in HTTP.
+That's a serious problem to be urgently worked on, because governments around the world [infect with malware their citizens for spying purposes](https://twitter.com/botherder/status/882243803448561665) when executables are being served in HTTP.
 
-Through a "Man in The Middle" attack, it is possible to inject arbitrary HTML code on VLC's official website served over HTTP, deceiving the users to download an authentic installer file but actually redirecting them to a potentially malicious external resource which could deliver a malware-laced package. The attack is doable if both, the user and the attacker, are on the same network (i.e. public access point of an airport, hotel, etc.)
+Through a "Man in The Middle" attack, it is possible to inject arbitrary HTML code on VLC's official website served over HTTP, deceiving the users to download an authentic installer file but actually redirecting them to a potentially malicious external resource which could deliver a malware-laced package. 
+The attack is doable if both, the user and the attacker, are on the same network (i.e. public access point of an airport, hotel, etc.) of if the attacker (like Governments) can control the network sitting in-between.
 
 The result of the attack is the alteration of the download page (i.e. http://get.videolan.org/vlc/2.2.6/win32/vlc-2.2.6-win32.exe) where we modify the following parts of code:
 
